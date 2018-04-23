@@ -1,0 +1,25 @@
+<nav class="black">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li  class='dropdown-trigger' href='#' data-target='dropdown1'>Products</li>
+      <li><a routerLink="crafts">Crafts</a></li>
+      <li  *ngFor="let u of [1,2,3,4]">
+        <a [routerLink]="['user', u]">User--{{u}}</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a routerLink="/products/sarees">Sarees</a></li>
+  <li><a routerLink="/products/dhotis">Dhotis</a></li>
+  <li class="divider" tabindex="-1"></li>
+  <li><a href="#!">three</a></li>
+  <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+  <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+</ul>
